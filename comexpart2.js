@@ -20,8 +20,7 @@ function listaDeClientes(nome, mes, ano) {
         "<li>Nome : " + nome + "</li> <br>" +
         "<li>Mês de Nascimento : " + mes + "</li> <br>" +
         "<li>Ano de Nascimento : " + ano + "</li> <br>" +
-        "</ul>"
-    )
+        "</ul>")
 }
 
 function somaDasIdades() {
