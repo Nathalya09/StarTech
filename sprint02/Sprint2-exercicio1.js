@@ -52,11 +52,16 @@ cabecalho(title);
 cabecalho(title2);
 align();
 
-var teste1 = prompt("Quantidade de clientes : ")
+let idade1 = anoAtual - anoNiver;
+let idade2 = anoAtual - anoNiver;
+let idade3 = anoAtual - anoNiver;
+let somaDasIdadesTeste = somaDasIdades();
+let mediaDasIdadesTeste = mediaDasIdades();
+let anoRecente = parseInt(prompt(" Digite o ano atual : "));
 
-var teste;
+var teste1 = parseInt(prompt("Quantidade de clientes : "));
 
-for (teste = 0; teste < teste1; teste++) {
+for (let teste = 0; teste < teste1; teste++) {
     var nomeCliente = prompt("Escolha um nome : ");
     var mesNiver = prompt("Insira seu mês de nascimento : ");
     var anoNiver = prompt("Insira agora o seu ano de nascimento : ");
@@ -83,7 +88,12 @@ for (teste = 0; teste < teste1; teste++) {
     subTitle(1 + teste);
     listaDeClientes(nomeCliente, mesNiver, anoNiver, tempoDeVida);
     align();
+    
+}
 
-} 
-
+conteudo(" *** Estatística *** ");
+espaçoLinha();
+conteudo("A soma das idades é : " + somaDasIdadesTeste);
+espaçoLinha();
+conteudo("A média das idades é : " + mediaDasIdadesTeste.toFixed(0));
 rodape();
