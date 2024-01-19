@@ -24,26 +24,22 @@ function listaDeClientes(nome, mes, ano, tempoDeVida) {
         "</ul>")
 }
 
-function somaDasIdades() {
-    let soma = idade1 + idade2 + idade3
-    return soma
-}
-
-function mediaDasIdades() {
-    let media = ((idade1 + idade2 + idade3) / 3)
-    return media
-}
-
 function conteudo(content) {
-    document.write(content)
+    document.write(content);
 }
 
 function rodape() {
     document.write("<h2> .:: <strong> Alura LEVEL UP </strong> ::. </h2>");
 }
 
-let dataAtual = new Date();
-let anoAtual = dataAtual.getFullYear();
+function somaDasIdades() {
+    return idadesComplementares;
+}
+
+function media(somaFinal, numeroDeClientes) {
+    var finalMedia = somaFinal / numeroDeClientes
+    return finalMedia
+}
 
 var title = "<h1> >> COMEX << </h1>";
 var title2 = "<h2> ::Lista de Clientes:: </h2>";
@@ -52,21 +48,22 @@ cabecalho(title);
 cabecalho(title2);
 align();
 
-let idade1 = anoAtual - anoNiver;
-let idade2 = anoAtual - anoNiver;
-let idade3 = anoAtual - anoNiver;
-let somaDasIdadesTeste = somaDasIdades();
-let mediaDasIdadesTeste = mediaDasIdades();
+var idadesComplementares = 0;
+
 let anoRecente = parseInt(prompt(" Digite o ano atual : "));
 
-var teste1 = parseInt(prompt("Quantidade de clientes : "));
+var quantidadeDeClientes = parseInt(prompt("Quantidade de clientes : "));
 
-for (let teste = 0; teste < teste1; teste++) {
+for (let teste = 0; teste < quantidadeDeClientes; teste++) {
     var nomeCliente = prompt("Escolha um nome : ");
     var mesNiver = prompt("Insira seu mês de nascimento : ");
-    var anoNiver = prompt("Insira agora o seu ano de nascimento : ");
+    var anoNiver = parseInt(prompt("Insira agora o seu ano de nascimento : "));
     var tempoDeVida;
-    var vida = anoAtual - anoNiver;
+    var vida = anoRecente - anoNiver;
+
+
+    console.log("Idade cliente " + teste + " - " + vida);
+
     if (vida <= 17) {
 
         tempoDeVida = "Adolescente"
@@ -84,16 +81,19 @@ for (let teste = 0; teste < teste1; teste++) {
         tempoDeVida = "Idoso"
 
     }
-
+    idadesComplementares = idadesComplementares + vida;
     subTitle(1 + teste);
     listaDeClientes(nomeCliente, mesNiver, anoNiver, tempoDeVida);
     align();
-    
+
+    var somaIdadesTotal = somaDasIdades()
+    var mediaIdades = media(somaIdadesTotal, quantidadeDeClientes)
+
 }
 
 conteudo(" *** Estatística *** ");
 espaçoLinha();
-conteudo("A soma das idades é : " + somaDasIdadesTeste);
+conteudo("A soma das idades é : " + somaIdadesTotal);
 espaçoLinha();
-conteudo("A média das idades é : " + mediaDasIdadesTeste.toFixed(0));
+conteudo("A média das idades é : " + mediaIdades);
 rodape();
