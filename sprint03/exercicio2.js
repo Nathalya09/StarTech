@@ -1,62 +1,62 @@
 
 
 
-function cabecalho(titulo) {
-    document.write(titulo)
-}
+// function cabecalho(titulo) {
+//     document.write(titulo)
+// }
 
-function align() {
-    document.write("<hr>")
-}
+// function align() {
+//     document.write("<hr>")
+// }
 
-function espaçoLinha() {
-    document.write("<br>")
-}
+// function espaçoLinha() {
+//     document.write("<br>")
+// }
 
-function subTitle(codigo) {
-    document.write("<h3> - Código : " + codigo + "</h3>")
-}
+// function subTitle(codigo) {
+//     document.write("<h3> - Código : " + codigo + "</h3>")
+// }
 
-function listaDeCategorias(categoria, codigoAdicionado) {
-    document.write(
-        "<ul>" +
-        "<li>Código : " + codigoAdicionado + "</li> <br>" +
-        "<li>Categoria : " + categoria + "</li> <br>" +
-        "</ul>")
-}
+// function listaDeCategorias(categoria, codigoAdicionado) {
+//     document.write(
+//         "<ul>" +
+//         "<li>Código : " + codigoAdicionado + "</li> <br>" +
+//         "<li>Categoria : " + categoria + "</li> <br>" +
+//         "</ul>")
+// }
 
-function conteudo(content) {
-    document.write(content);
-}
+// function conteudo(content) {
+//     document.write(content);
+// }
 
-function rodape() {
-    document.write("<h2> .:: <strong> Alura LEVEL UP </strong> ::. </h2>");
-}
+// function rodape() {
+//     document.write("<h2> .:: <strong> Alura LEVEL UP </strong> ::. </h2>");
+// }
 
-function somaDasIdades() {
-    return idadesComplementares;
-}
+// function somaDasIdades() {
+//     return idadesComplementares;
+// }
 
-function media(somaFinal, numeroDeClientes) {
-    var finalMedia = somaFinal / numeroDeClientes
-    return finalMedia
-}
+// function media(somaFinal, numeroDeClientes) {
+//     var finalMedia = somaFinal / numeroDeClientes
+//     return finalMedia
+// }
 
-function enviar(){
-    let categoriaAdicionada = document.getElementById("categoria").value
-    console.log(categoriaAdicionada)
+// function enviar(){
+//     let categoriaAdicionada = document.getElementById("categoria").value
+//     console.log(categoriaAdicionada)
 
-    listaDeCategorias(categoriaAdicionada, codigo);
-}
+//     listaDeCategorias(categoriaAdicionada, codigo);
+// }
 
-var codigo = 1
+// var codigo = 1
 
-align();
-espaçoLinha();
+// align();
+// espaçoLinha();
 
 
 
-var idadesComplementares = 0;
+// var idadesComplementares = 0;
 
 // let anoRecente = parseInt(prompt(" Digite o ano atual : "));
 
@@ -119,3 +119,15 @@ var idadesComplementares = 0;
 //         rodape();
 //     }
 // }
+
+
+    var nomesRegistrados = {} 
+    var contador = 0;
+
+    function cadastroUsuario(){
+        var nome = document.getElementById("Nome").value;
+    
+    if(nome.trim()===""){
+        alert("Insira um nome"); }    
+    
+    }
