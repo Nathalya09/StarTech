@@ -8,7 +8,7 @@ function align() {
 
 function espaçoLinha() {
     document.write("<br>")
-}
+} 
 
 function subTitle(codigo) {
     document.write("<h3> - Código : " + codigo + "</h3>")

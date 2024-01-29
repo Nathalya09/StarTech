@@ -46,7 +46,7 @@ var title2 = "<h2> ::Lista de Clientes:: </h2>";
 
 cabecalho(title);
 cabecalho(title2);
-align();
+align(); 
 
 var idadesComplementares = 0;
 
